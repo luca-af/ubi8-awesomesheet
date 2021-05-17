@@ -1,6 +1,5 @@
 FROM registry.access.redhat.com/ubi8/ubi-minimal
-LABEL maintainer="Luca - <elroncio@gmx.ca>"
-LABEL RUN="podman run --name znc -p 127.0.0.1:8000:8000"
+LABEL maintainer="Luca"
 RUN microdnf install npm git python3
 RUN git clone https://github.com/zombieFox/awesomeSheet.git && adduser pathfinder && chown -R pathfinder:pathfinder awesomeSheet
 WORKDIR awesomeSheet
